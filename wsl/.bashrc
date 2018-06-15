@@ -115,3 +115,43 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Support usage of X11 GUI programs on WSL
+# Reference https://www.scivision.co/x11-gui-windows-subsystem-for-linux/
+DISPLAY=localhost:0.0
+export DISPLAY
+
+# Special characters
+# \h	the hose name up to the first .
+# \n	new line
+# \s	the name of the shell
+# \t	the currnt time in 24-hour format
+# \u	the username of the current user
+# \w	the current working directory
+# \W	the basename of the current working directory
+
+# PROMPT
+# Based on https://github.com/mathiasbynens/dotfiles/blob/master/.bash_prompt
+
+# Colors
+bold=$(tput bold);
+yellow=$(tput setaf 228);
+orange=$(tput setaf 166);
+green=$(tput setaf 71);
+reset=$(tput sgr0);
+
+# Set the terminal title and prompt.
+PS1="\[\033]0;\W\007\]"; # working directory base name
+PS1+="\[${bold}\]";  # Bold is not working in WSL Ubuntu
+PS1+="\[${yellow}\]\u ";  # username
+PS1+="\[${reset}\]at ";
+PS1+="\[${orange}\]\h ";  # hostname
+PS1+="\[${reset}\]in ";
+PS1+="\[${green}\]\W ";  # working directory
+PS1+="\n";
+PS1+="\[${reset}\]$ ";
+export PS1;
+
+# This does not appear to have any effect on WSL Ubuntu prompt.
+PS2="\n\[${yelloe}\]→ \[${reset}\]";
+export PS2;

@@ -1,3 +1,6 @@
+# Go to development directory
+# TODO: test if directory exists and located based on platform
+# this is for wsl on Windows:
 alias mydev='cd /mnt/c/Users/brian/Code'
 alias mydocs='cd /mnt/c/Users/brian/Documents'
 

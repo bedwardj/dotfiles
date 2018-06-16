@@ -72,14 +72,26 @@ prompt_git() {
 
 # Colors
 bold=$(tput bold);
-yellow=$(tput setaf 228);
-orange=$(tput setaf 166);
-green=$(tput setaf 71);
+
 reset=$(tput sgr0);
 
+yellow=$(tput setaf 136);
+orange=$(tput setaf 166);
+green=$(tput setaf 64);
 blue=$(tput setaf 33);
 violet=$(tput setaf 61);
 white=$(tput setaf 15);
+red=$(tput setaf 124);
+magenta=$(tput setaf 125);
+
+# yellow=$(tput setaf 228);
+# orange=$(tput setaf 166);
+# green=$(tput setaf 71);
+# blue=$(tput setaf 33);
+# violet=$(tput setaf 61);
+# white=$(tput setaf 15);
+
+
 
 # Set the terminal title and prompt.
 PS1="\[\033]0;\W\007\]"; # working directory base name

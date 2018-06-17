@@ -1,5 +1,7 @@
 [user]
 	email = brian.johnson@backbeat.design
 	name = Brian Johnson, P.E.
-	[color]
-		ui = true
+[color]
+	ui = true
+[push]
+	default = simple

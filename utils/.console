@@ -1,0 +1,26 @@
+# Terminal/console info
+
+# Colors
+# Taken from solarized's macOS Terminal.app settings
+# Setting           RGB
+# Background        4   32  41
+# Text              112 130 132
+# Bold Text         129 144 144
+# Selection         10  41  51
+# Cursor            112 130 132
+
+# Fonts
+# Terminal              Font
+# masOS Terminal.app    Menlo Regular 14 pt.
+
+# Cursor
+# Terminal              Setting
+# macOS Terminal.app    Block
+
+# Terminfo
+# Terminal              Setting
+# macOS Terminal.app    xterm-256color
+
+# Text encoding
+# Terminal              Setting
+# macOS Terminal.app    UTF-8
